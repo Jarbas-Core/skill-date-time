@@ -22,14 +22,13 @@ import holidays
 
 from adapt.intent import IntentBuilder
 import mycroft.audio
-# from mycroft.util.format import nice_time
-from mycroft.util.format import pronounce_number, nice_date, nice_time
-from mycroft.util.lang.format_de import nice_time_de, pronounce_ordinal_de
 from mycroft.messagebus.message import Message
 from mycroft import MycroftSkill, intent_handler, intent_file_handler
-from mycroft.util.parse import extract_datetime, fuzzy_match, extract_number, normalize
 from mycroft.util.time import now_utc, default_timezone, to_local
 from mycroft.skills.core import resting_screen_handler
+from lingua_franca.parse import extract_datetime, fuzzy_match, extract_number, normalize
+from lingua_franca.format import pronounce_number, nice_date, nice_time
+from lingua_franca.lang.format_de import nice_time_de, pronounce_ordinal_de
 
 
 class TimeSkill(MycroftSkill):
